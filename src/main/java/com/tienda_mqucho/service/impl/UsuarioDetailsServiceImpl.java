@@ -35,7 +35,7 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService,UserDeta
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) 
             throws UsernameNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet."); 
+         
         
         Usuario usuario = usuarioDao.findByUsername(username);
         

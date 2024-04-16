@@ -63,17 +63,17 @@
                         
                         <!-- esto aparece si no estoy autenticado -->
                         <ul class="navbar-nav" sec:authorize='!isAuthenticated()'>
-                            <li class='nav-item px-2 text-white my-auto'>
+                            <li class='nav-item text-white my-auto'>
                                 <img th:src="@{${session.usuarioImagen}}"
                                      alt="foto"
                                      height="40"
                                      class="rounded-circle"/>
                                 <span sec:authentication="name">Doe</span>
                             </li>
-                            <li class='nav-item px-2 text-white my-auto'>
+                            <li class='nav-item text-white my-auto'>
                                 <form method="post"
                                       th:action="@{/logout}">
-                                    <button class="btn btn-dark">
+                                    <button class="btn btn">
                                         <i class="fas fa-sing-out-alt"></i>
                                     </button>
                                 </form>
